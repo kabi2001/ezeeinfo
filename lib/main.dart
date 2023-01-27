@@ -1,17 +1,28 @@
+import 'dart:async';
+
 import 'package:details/gps_screen.dart';
 import 'package:details/home_screen.dart';
+import 'package:details/route_pages.dart';
 import 'package:details/support_screen.dart';
 import 'package:details/tech_screen.dart';
+//import 'package:details/route_pages.dart';
 import 'package:flutter/material.dart';
+
+import 'home_screen.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,8 +31,9 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        initialRoute: HomeScreen.id,
+        initialRoute: WelcomScreen.id,
         routes: {
+          WelcomScreen.id: (context) => const WelcomScreen(),
           HomeScreen.id: (context) => const HomeScreen(),
           TechScreen.id: (context) => const TechScreen(),
           GpsScreen.id: (context) => const GpsScreen(),
