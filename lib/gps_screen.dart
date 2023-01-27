@@ -1,3 +1,4 @@
+import 'package:details/update_screen.dart';
 import 'package:flutter/material.dart';
 
 class GpsScreen extends StatefulWidget {
@@ -14,16 +15,33 @@ class _GpsScreenState extends State<GpsScreen> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
+        appBar: AppBar(
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+          centerTitle: true,
+          title: const Text(
+            'Gps Team',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
         ),
-        centerTitle: true,
-        title: const Text('GPS Team'),
-      )),
+        body: Column(children: [
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, UpdateDetails.id);
+                },
+                child: const Text(
+                  'Add Employees',
+                  style: TextStyle(color: Colors.black, fontSize: 20.0),
+                )),
+          )
+        ]),
+      ),
     );
   }
 }

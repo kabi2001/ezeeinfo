@@ -19,7 +19,10 @@ class _HomeScreenState extends State<HomeScreen> {
       home: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: const Text('Ezeeinfo cloud solutions'),
+          title: const Text(
+            'Ezeeinfo cloud solutions',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -32,28 +35,28 @@ class _HomeScreenState extends State<HomeScreen> {
                     Navigator.pushNamed(context, TechScreen.id);
                   },
                   child: Container(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Icon(
-                          Icons.computer,
-                          size: 100,
-                        ),
-                        Text(
-                          'Tech Team',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 30,
-                              color: Colors.white),
-                        ),
-                      ],
-                    ),
                     decoration: const BoxDecoration(
                       color: Colors.blueAccent,
                       borderRadius: BorderRadius.all(Radius.circular(15)),
                     ),
                     height: 200,
                     width: 300,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: const [
+                        Icon(
+                          Icons.laptop,
+                          size: 100,
+                        ),
+                        Text(
+                          'Tech Team',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                              color: Colors.white),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 GestureDetector(
@@ -61,9 +64,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     Navigator.pushNamed(context, GpsScreen.id);
                   },
                   child: Container(
+                    decoration: const BoxDecoration(
+                      color: Colors.blueAccent,
+                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                    ),
+                    height: 200,
+                    width: 300,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
+                      children: const [
                         Icon(
                           Icons.location_on,
                           size: 100,
@@ -72,17 +81,11 @@ class _HomeScreenState extends State<HomeScreen> {
                           'Gps Team',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 30,
+                              fontSize: 20,
                               color: Colors.white),
                         ),
                       ],
                     ),
-                    decoration: const BoxDecoration(
-                      color: Colors.blueAccent,
-                      borderRadius: BorderRadius.all(Radius.circular(15)),
-                    ),
-                    height: 200,
-                    width: 300,
                   ),
                 ),
                 GestureDetector(
@@ -90,9 +93,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     Navigator.pushNamed(context, SupportScreen.id);
                   },
                   child: Container(
+                    decoration: const BoxDecoration(
+                      color: Colors.blueAccent,
+                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                    ),
+                    height: 200,
+                    width: 300,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
+                      children: const [
                         Icon(
                           Icons.headset_mic,
                           size: 100,
@@ -101,17 +110,11 @@ class _HomeScreenState extends State<HomeScreen> {
                           'Support Team',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 30,
+                              fontSize: 20,
                               color: Colors.white),
                         ),
                       ],
                     ),
-                    decoration: const BoxDecoration(
-                      color: Colors.blueAccent,
-                      borderRadius: BorderRadius.all(Radius.circular(15)),
-                    ),
-                    height: 200,
-                    width: 300,
                   ),
                 ),
               ],

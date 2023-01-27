@@ -1,3 +1,4 @@
+import 'package:details/update_screen.dart';
 import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
@@ -38,7 +39,19 @@ class _TechScreenState extends State<TechScreen> {
           title: const Text('Technical Team'),
         ),
         body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, UpdateDetails.id);
+                  },
+                  child: const Text(
+                    'Add Employees',
+                    style: TextStyle(color: Colors.black, fontSize: 20.0),
+                  )),
+            ),
             SizedBox(
               height: 50,
             ),
