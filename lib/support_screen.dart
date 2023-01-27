@@ -1,3 +1,4 @@
+import 'package:details/update_screen.dart';
 import 'package:flutter/material.dart';
 
 class SupportScreen extends StatefulWidget {
@@ -27,6 +28,19 @@ class _SupportScreenState extends State<SupportScreen> {
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
+        body: Column(children: [
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, UpdateDetails.id);
+                },
+                child: const Text(
+                  'Add Employees',
+                  style: TextStyle(color: Colors.black, fontSize: 20.0),
+                )),
+          )
+        ]),
       ),
     );
   }

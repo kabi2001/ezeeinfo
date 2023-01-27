@@ -3,6 +3,7 @@ import 'package:details/home_screen.dart';
 import 'package:details/support_screen.dart';
 import 'package:details/tech_screen.dart';
 import 'package:details/update_screen.dart';
+import 'package:details/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,8 +22,9 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        initialRoute: HomeScreen.id,
+        initialRoute: WelcomScreen.id,
         routes: {
+          WelcomScreen.id: (context) => const WelcomScreen(),
           HomeScreen.id: (context) => const HomeScreen(),
           TechScreen.id: (context) => const TechScreen(),
           GpsScreen.id: (context) => const GpsScreen(),
