@@ -2,6 +2,7 @@ import 'package:details/gps_screen.dart';
 import 'package:details/home_screen.dart';
 import 'package:details/support_screen.dart';
 import 'package:details/tech_screen.dart';
+import 'package:details/update_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
           TechScreen.id: (context) => const TechScreen(),
           GpsScreen.id: (context) => const GpsScreen(),
           SupportScreen.id: (context) => const SupportScreen(),
+          UpdateDetails.id: (context) => const UpdateDetails(),
         });
   }
 }
