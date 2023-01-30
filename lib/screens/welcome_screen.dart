@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:details/gps_screen.dart';
-import 'package:details/home_screen.dart';
-import 'package:details/support_screen.dart';
-import 'package:details/tech_screen.dart';
+import 'package:details/screens/gps_screen.dart';
+import 'package:details/screens/home_screen.dart';
+import 'package:details/screens/support_screen.dart';
+import 'package:details/screens/tech_screen.dart';
 import 'package:flutter/material.dart';
 
 class WelcomScreen extends StatefulWidget {

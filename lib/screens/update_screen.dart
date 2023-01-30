@@ -1,3 +1,4 @@
+import 'package:details/const.dart';
 import 'package:flutter/material.dart';
 
 class UpdateDetails extends StatefulWidget {
@@ -45,16 +46,13 @@ class _UpdateDetailsState extends State<UpdateDetails> {
       home: Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            icon: const Icon(Icons.arrow_back),
+            icon: kBackButtonIcon,
             onPressed: () {
               Navigator.pop(context);
             },
           ),
           centerTitle: true,
-          title: const Text(
-            'Update Details',
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
+          title: kUpdateDetails,
         ),
         body: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -93,12 +91,12 @@ class _UpdateDetailsState extends State<UpdateDetails> {
                 hinttext: 'Enter Your Address',
               ),
               Container(
-                padding: EdgeInsets.only(left: 10, right: 13, bottom: 7),
+                padding: const EdgeInsets.only(left: 10, right: 13, bottom: 7),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Team'),
-                    SizedBox(
+                    const Text('Team'),
+                    const SizedBox(
                       height: 15,
                     ),
                     SizedBox(
@@ -161,7 +159,7 @@ class CustomTextfield extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text('$text'),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           SizedBox(

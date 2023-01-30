@@ -1,4 +1,5 @@
-import 'package:details/update_screen.dart';
+import 'package:details/const.dart';
+import 'package:details/screens/update_screen.dart';
 import 'package:flutter/material.dart';
 
 class TechScreen extends StatefulWidget {
@@ -17,28 +18,23 @@ class _TechScreenState extends State<TechScreen> {
       home: Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            icon: const Icon(Icons.arrow_back),
+            icon: kBackButtonIcon,
             onPressed: () {
               Navigator.pop(context);
             },
           ),
           centerTitle: true,
-          title: const Text(
-            'Technical Team',
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
+          title: kTechTeamTitle,
         ),
         body: Column(children: [
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, UpdateDetails.id);
-                },
-                child: const Text(
-                  'Add Employees',
-                  style: TextStyle(color: Colors.black, fontSize: 20.0),
-                )),
+              onPressed: () {
+                Navigator.pushNamed(context, UpdateDetails.id);
+              },
+              child: kAddEmployeesText,
+            ),
           )
         ]),
       ),
