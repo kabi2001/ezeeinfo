@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:details/schema/itemservice.dart';
 import 'package:details/screens/gps_screen.dart';
 import 'package:details/screens/home_screen.dart';
 import 'package:details/screens/support_screen.dart';
@@ -17,6 +18,8 @@ class WelcomScreen extends StatefulWidget {
 class _WelcomScreenState extends State<WelcomScreen> {
   void initState() {
     super.initState();
+    method();
+    realmMethod();
     Timer(
         const Duration(seconds: 5),
         () => Navigator.pushReplacement(
